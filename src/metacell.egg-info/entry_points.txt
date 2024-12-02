@@ -1,0 +1,2 @@
+[console_scrips]
+metacell = metacell.__main__:main
