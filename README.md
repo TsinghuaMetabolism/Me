@@ -1,24 +1,69 @@
-### 欢迎使用坚果云Markdown
+# Met-A-Cell
 
-##### 新增图片上传功能
+# Content
+- [Overview](#overview)
+- [Documentation](#documentation)
+- [System Requirements](#system-requirements)
+- [Installation Guide](#installation-guide)
+- [Tutorials](#tutorials)
+- [License](#license)
+- [References](#references)
+- [tissue](https://github.com/TsinghuaMetabolism/Met-A-Cell/issues)
 
-现在可以在文章中插入图片，将更丰富的内容分享给朋友了！
+# Overview
+Met-A-Cell is a scalable python package for analyzing single-cell metabolomics (SCM) built jointly with anndata. It supports comprehensive single-cell data analysis, offering key functionalities including:
+1) Baseline correction and background noise removal;
+2) Identification of single-cell events;
+3) Annotation of multi-cell events;
+4) Extraction and annotation of single-cell metabolic features; 
+5) Alignment of LIF and MS data;
+6) Downstream analysis such as clustering, dimensionality reduction analysis, differential metabolite analysis, and pathway enrichment analysis.
 
-- 您可以插入外链图片，或上传本地图片到文档中。
-- 从本地上传的图片不支持外链引用，您可以通过坚果云分享链接来发布图文预览。
-- 可上传的单张图片最大20M，支持PNG、JPG格式，使用时请留意账号流量或空间是否充足。
-- 若有其他疑问，欢迎咨询官网在线客服。
+# Documentation
+For detailed documentation and usage examples, please refer to the following:
+- [Met-A-Cell Tutorial]()
+- [API Documentation]()
+- [FAQ]()
 
- 
+# System Requirements
+## Hardware Requirements
+`Met-A-Cell` package requires only a standard computer with enough RAM to support in-memory operations. 
+## Software Requirements
+This package is supported for macOS and Linux. The package has been tested on the following systems:
+- macOS: Sonoma (14.6.1)
+- Linux: CentOS (7.9.2009)
 
-### Welcome to the Nutstore Markdown
+The package have also tested on Google Colab, with the runtime type set to Python3, hardware accelerator to CPU, and High-RAM mode enabled.
 
-##### New feature! Insert pictures in your articles now!
+## Python Dependencies
+**Python version**: 3.9.10 or higher.
 
-You can insert pictures from external links, or upload ones.
+`Met-A-Cell` requires the following:
+- numpy>=1.26.4
+- pandas>=2.1.0
+- scipy>=1.11.4
+- tqdm>=4.62.3
+- pyopenms>=2.7.0 
+- pybaselines>=1.1.0 
+- matplotlib>=3.7.3 
+- anndata>=0.10.8
+- scanpy>=1.10.2
 
-The pictures in the articles can not be used through external links. Please share your articles with the Nutstore share link.
+# Installation Guide
+## Install from Github
+```angular2html
+git clone https://github.com/TsinghuaMetabolism/Met-A-Cell.git
+cd metacell
+python3 setup.py install
+```
 
-The maximum size of the picture to upload is 20M. PNG and JPG are better. Be sure that your traffic and space are enough if you want to add a lot of pictures in your article.
+# Tutorials
+For a quick introduction to Met-A-Cell, we provide a concise tutorial along with raw SCM example files to demonstrate the application of the package. For a comprehensive description of its features, please refer to the documentation with usage: [Met-A-Cell Tutorial]().
 
-Have any other questions, please contact our official customer service.
+# License
+`Met-A-Cell` is licensed under the MIT License. Feel free to use, modify, and distribute the software, but please refer to the full license for more details.
+# References
+This software was developed based on the following research:
+1. anndata: Annotated data. Isaac Virshup, Sergei Rybakov, Fabian J. Theis, Philipp Angerer, F. Alexander Wolf. JOSS 2024 Sep 16. doi: [10.21105/joss.04371](https://doi.org/10.21105/joss.04371).
+2. The scverse project provides a computational ecosystem for single-cell omics data analysis. Isaac Virshup, Danila Bredikhin, Lukas Heumos, Giovanni Palla, Gregor Sturm, Adam Gayoso, Ilia Kats, Mikaela Koutrouli, Scverse Community, Bonnie Berger, Dana Pe’er, Aviv Regev, Sarah A. Teichmann, Francesca Finotello, F. Alexander Wolf, Nir Yosef, Oliver Stegle & Fabian J. Theis. Nat Biotechnol. 2023 Apr 10. doi: [10.1038/s41587-023-01733-8](https://doi.org/10.1038/s41587-023-01733-8).
+3. SCANPY: large-scale single-cell gene expression data analysis. F. Alexander Wolf, Philipp Angerer, Fabian J. Theis. Genome Biology 2018 Feb 06. doi: [10.1186/s13059-017-1382-0](https://doi.org/10.1186/s13059-017-1382-0).
